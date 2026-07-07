@@ -1,0 +1,6 @@
+{
+  "name": "반도체 제조 공정 및 품질 관리 학습관",
+  "description": "대학생들을 위한 반도체 제조 공정 및 품질 관리 입문용 인터랙티브 교육 웹사이트입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
