@@ -29,44 +29,44 @@ function QuizStartScreen({ onStart }: QuizStartScreenProps) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -15 }}
       transition={{ duration: 0.4 }}
-      className="rounded-3xl border border-slate-200 bg-white p-8 sm:p-12 shadow-xl dark:border-slate-800 dark:bg-slate-950 text-center space-y-8"
+      className="rounded-3xl border border-slate-200 bg-white p-4 sm:p-6 md:p-8 shadow-xl dark:border-slate-800 dark:bg-slate-950 text-center space-y-3 sm:space-y-4 md:space-y-5"
       id="quiz-start-view"
     >
-      <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-950/50 dark:text-blue-400">
-        <Brain className="h-12 w-12 animate-pulse" />
+      <div className="mx-auto flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-950/50 dark:text-blue-400">
+        <Brain className="h-6 w-6 sm:h-8 sm:w-8 animate-pulse" />
       </div>
 
-      <div className="space-y-3">
-        <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+      <div className="space-y-1">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-extrabold text-slate-900 dark:text-white">
           실력 자가진단 도전!
         </h3>
-        <p className="text-slate-500 dark:text-slate-400 text-sm max-w-lg mx-auto leading-relaxed">
+        <p className="text-slate-500 dark:text-slate-400 text-[10px] sm:text-xs md:text-sm max-w-lg mx-auto leading-relaxed">
           반도체 8대 주요 공정의 정밀 지식부터 통계적 품질 관리(SPC), 수율 예측 및 Cp/Cpk 분석까지, 실제 대학 강의 수준의 엄선된 퀴즈가 준비되어 있습니다.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-xl mx-auto pt-2 text-left">
-        <div className="bg-slate-50 dark:bg-slate-900/60 p-4 rounded-2xl border border-slate-100 dark:border-slate-900">
-          <div className="text-xs font-extrabold text-blue-600 dark:text-blue-400 mb-1">무작위 5문항</div>
-          <div className="text-xs text-slate-500 dark:text-slate-400">총 1,000개 이상의 문항 중 매회 엄선된 5개 퀴즈가 무작위로 구성됩니다.</div>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 max-w-xl mx-auto text-left">
+        <div className="bg-slate-50 dark:bg-slate-900/60 p-2.5 rounded-2xl border border-slate-100 dark:border-slate-900">
+          <div className="text-[10px] sm:text-xs font-extrabold text-blue-600 dark:text-blue-400 mb-0.5">무작위 5문항</div>
+          <div className="text-[9px] sm:text-[10px] md:text-xs text-slate-500 dark:text-slate-400 leading-normal">총 1,000개 이상의 문항 중 매회 엄선된 5개 퀴즈가 무작위로 구성됩니다.</div>
         </div>
-        <div className="bg-slate-50 dark:bg-slate-900/60 p-4 rounded-2xl border border-slate-100 dark:border-slate-900">
-          <div className="text-xs font-extrabold text-emerald-600 dark:text-emerald-400 mb-1">상세한 해설</div>
-          <div className="text-xs text-slate-500 dark:text-slate-400">오답을 고르더라도 문제의 출제 의도와 공정 원리가 상세히 설명됩니다.</div>
+        <div className="bg-slate-50 dark:bg-slate-900/60 p-2.5 rounded-2xl border border-slate-100 dark:border-slate-900">
+          <div className="text-[10px] sm:text-xs font-extrabold text-emerald-600 dark:text-emerald-400 mb-0.5">상세한 해설</div>
+          <div className="text-[9px] sm:text-[10px] md:text-xs text-slate-500 dark:text-slate-400 leading-normal">오답을 고르더라도 문제의 출제 의도와 공정 원리가 상세히 설명됩니다.</div>
         </div>
-        <div className="bg-slate-50 dark:bg-slate-900/60 p-4 rounded-2xl border border-slate-100 dark:border-slate-900">
-          <div className="text-xs font-extrabold text-amber-600 dark:text-amber-400 mb-1">수율 기반 진단</div>
-          <div className="text-xs text-slate-500 dark:text-slate-400">결과에 맞춰 현재 반도체 공정에 대한 본인의 누적 이해도를 평가받을 수 있습니다.</div>
+        <div className="bg-slate-50 dark:bg-slate-900/60 p-2.5 rounded-2xl border border-slate-100 dark:border-slate-900">
+          <div className="text-[10px] sm:text-xs font-extrabold text-amber-600 dark:text-amber-400 mb-0.5">수율 기반 진단</div>
+          <div className="text-[9px] sm:text-[10px] md:text-xs text-slate-500 dark:text-slate-400 leading-normal">결과에 맞춰 현재 반도체 공정에 대한 본인의 누적 이해도를 평가받을 수 있습니다.</div>
         </div>
       </div>
 
-      <div className="pt-4">
+      <div className="pt-1">
         <button
           onClick={onStart}
-          className="inline-flex items-center space-x-2.5 rounded-2xl bg-blue-600 px-8 py-4 text-base font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:bg-blue-700 hover:scale-[1.02] dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer"
+          className="inline-flex items-center space-x-2 rounded-2xl bg-blue-600 px-5 py-2.5 text-xs sm:text-sm font-bold text-white shadow-lg shadow-blue-500/20 transition-all hover:bg-blue-700 hover:scale-[1.02] dark:bg-blue-500 dark:hover:bg-blue-600 cursor-pointer"
           id="quiz-start-btn"
         >
-          <Play className="h-5 w-5 fill-current" />
+          <Play className="h-4 w-4 sm:h-4.5 sm:w-4.5 fill-current" />
           <span>반도체 퀴즈 시작하기</span>
         </button>
       </div>
@@ -331,15 +331,15 @@ export default function Quiz() {
   }, [view, currentIdx]);
 
   return (
-    <div className="py-8 sm:py-12 bg-slate-50 dark:bg-slate-900/50 min-h-[calc(100vh-4rem)]">
+    <div className="py-2 sm:py-4 bg-slate-50 dark:bg-slate-900/50 min-h-[calc(100vh-6rem)]">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
 
         {/* Header (Keep consistent on all screens) */}
-        <div className="text-center space-y-3 mb-8">
-          <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white">
+        <div className="text-center space-y-1 mb-3 md:mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white">
             반도체 공정 & 품질 자가진단 퀴즈
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-sm">
+          <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm">
             대학 강의 수준의 기본 개념과 품질 관리 지식을 테스트해 보세요.
           </p>
         </div>
